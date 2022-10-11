@@ -1,0 +1,13 @@
+{
+    "name": "teste/teste",
+    "description": "estudo",
+    "type": "project",
+    "license": "gnu",
+    "authors": [
+        {
+            "name": "luiz",
+            "email": "luizsilvatraders@hotmail.com"
+        }
+    ],
+    "require": {}
+}
