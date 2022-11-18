@@ -1,0 +1,21 @@
+<h1>INSIRA UM CARRO</h1>
+<form action="process.php" method="POST">
+    <div>
+        <label for="modelo">Modelo do carro:</label>
+        <input type="text" name="modelo" placeholder="Insira o modelo">
+    </div>
+    <div>
+        <label for="km">kilometragem do carro:</label>
+        <input type="text" name="km" placeholder="Insira a kilometragem">
+    </div>
+    <div>
+        <label for="cor">Cor do carro:</label>
+        <input type="text" name="cor" placeholder="Insira a cor">
+    </div>
+    <input type="submit" value="Salvar">
+</form>
+<ul>
+    <?php foreach($cars as $car): ?>
+        <li><?= $car->getModelo() ?> - <?= $car->getKm() ?> - <?= $car->getCor() ?></li>
+    <?php endforeach;?>
+</ul>
