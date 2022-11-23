@@ -1,10 +1,10 @@
 <?php
 
-require_once 'models/Car.php';
+namespace App\models;
 
 interface CarDAOInterface
 {
-    public function create(Car $car);
+    public function create(Carro $car);
 
     public function findAll();
 }

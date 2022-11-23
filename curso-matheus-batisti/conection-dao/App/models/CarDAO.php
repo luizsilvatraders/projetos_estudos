@@ -1,10 +1,8 @@
 <?php
 
-require_once 'models/Car.php';
-require_once 'CarDAOInterface.php';
-require_once 'DAOPDO.php';
+namespace App\models;
 
-class CarDAO extends DAOPDO implements CarDAOInterface {
+class CarDAO extends Conexao implements CarDAOInterface {
 
     public function findAll(){
 
@@ -16,7 +14,7 @@ class CarDAO extends DAOPDO implements CarDAOInterface {
 
         foreach($data as $item){
 
-            $car = new Car();
+            $car = new Carro();
             $car->setId($item["id"]);
             $car->setModelo($item["modelo"]);
             $car->setKm($item["km"]);
@@ -30,7 +28,7 @@ class CarDAO extends DAOPDO implements CarDAOInterface {
 
     }
 
-    public function create(Car $car){
+    public function create(Carro $car){
 
         $stmt = $this->conn->prepare("INSERT INTO cars (modelo, km, cor) VALUES (:modelo, :km, :cor)");
 

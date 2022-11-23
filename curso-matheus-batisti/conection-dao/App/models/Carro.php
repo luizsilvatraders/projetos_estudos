@@ -1,6 +1,8 @@
 <?php
 
-class Car
+namespace App\models;
+
+class Carro
 {
     private $id;
     private $modelo;
